@@ -1,0 +1,290 @@
+[
+  {
+    "repo": "express",
+    "rows": [
+      {
+        "query": "how does app.set store a setting value",
+        "expect": "set (lib/application.js)",
+        "rank": 1,
+        "packed": 370,
+        "baseline": 305
+      },
+      {
+        "query": "compile the etag function from the setting",
+        "expect": "compileETag (lib/utils.js)",
+        "rank": 1,
+        "packed": 663,
+        "baseline": 449
+      },
+      {
+        "query": "normalize a response type such as json or html",
+        "expect": "normalizeType (lib/utils.js)",
+        "rank": 2,
+        "packed": 791,
+        "baseline": 2896
+      },
+      {
+        "query": "send a file as the response body",
+        "expect": "sendFile (lib/response.js)",
+        "rank": 1,
+        "packed": 1200,
+        "baseline": 549
+      },
+      {
+        "query": "redirect and set the location header",
+        "expect": "redirect (lib/response.js)",
+        "rank": 1,
+        "packed": 728,
+        "baseline": 684
+      },
+      {
+        "query": "content negotiation for accepted encodings",
+        "expect": "acceptsEncodings (lib/request.js)",
+        "rank": 1,
+        "packed": 967,
+        "baseline": 6512
+      },
+      {
+        "query": "view rendering engine lookup",
+        "expect": "View (lib/view.js)",
+        "rank": 1,
+        "packed": 1149,
+        "baseline": 6877
+      },
+      {
+        "query": "compile the query parser setting",
+        "expect": "compileQueryParser (lib/utils.js)",
+        "rank": 1,
+        "packed": 681,
+        "baseline": 698
+      },
+      {
+        "query": "mount a middleware or sub app on the application",
+        "expect": "use (lib/application.js)",
+        "rank": 1,
+        "packed": 884,
+        "baseline": 305
+      },
+      {
+        "query": "should respond with jsonp",
+        "expect": "should respond with jsonp (test/res.jsonp.js)",
+        "rank": 1,
+        "packed": 1144,
+        "baseline": 8512
+      },
+      {
+        "query": "trust proxy setting compiled into a function",
+        "expect": "compileTrust (lib/utils.js)",
+        "rank": 1,
+        "packed": 871,
+        "baseline": 449
+      },
+      {
+        "query": "parse the range header of a request",
+        "expect": "range (lib/request.js)",
+        "rank": 1,
+        "packed": 573,
+        "baseline": 7192
+      }
+    ],
+    "n": 12,
+    "top1": 0.9166666666666666,
+    "top5": 1,
+    "mrr": 0.9583333333333334,
+    "packedAvg": 835,
+    "baselineAvg": 2952,
+    "saving": 0.717144631365022
+  },
+  {
+    "repo": "zod",
+    "rows": [
+      {
+        "query": "convert a base schema definition into a zod schema",
+        "expect": "convertBaseSchema (packages/zod/src/v4/classic/from-json-schema.ts)",
+        "rank": 1,
+        "packed": 1219,
+        "baseline": 1562
+      },
+      {
+        "query": "walk a schema tree and visit every node",
+        "expect": "visit (packages/zod/src/v4/core/visit.ts)",
+        "rank": 1,
+        "packed": 864,
+        "baseline": 6243
+      },
+      {
+        "query": "generate the check that validates an object's properties",
+        "expect": "generateObjectCheck (packages/zod/src/v4/core/compile.ts)",
+        "rank": "—",
+        "packed": 1009,
+        "baseline": 4751
+      },
+      {
+        "query": "build a jit compiled object parser",
+        "expect": "$ZodObjectJIT (packages/zod/src/v4/core/schemas.ts)",
+        "rank": 3,
+        "packed": 1217,
+        "baseline": 2977
+      },
+      {
+        "query": "extract definitions into a reusable defs map",
+        "expect": "extractDefs (packages/zod/src/v4/core/to-json-schema.ts)",
+        "rank": 1,
+        "packed": 1168,
+        "baseline": 6560
+      },
+      {
+        "query": "detect a recursive schema cycle",
+        "expect": "isRecursiveSchema (packages/zod/src/v4/core/memoizer.ts)",
+        "rank": 1,
+        "packed": 702,
+        "baseline": 6243
+      },
+      {
+        "query": "flatten validation issues into field errors",
+        "expect": "flattenError (packages/zod/src/v4/core/errors.ts)",
+        "rank": 1,
+        "packed": 453,
+        "baseline": 4846
+      },
+      {
+        "query": "generate a check for a string format",
+        "expect": "generateStringFormatCheck (packages/zod/src/v4/core/compile.ts)",
+        "rank": 1,
+        "packed": 1199,
+        "baseline": 2067
+      },
+      {
+        "query": "define a record schema with keys and values",
+        "expect": "record (packages/zod/src/v4/classic/schemas.ts)",
+        "rank": 1,
+        "packed": 581,
+        "baseline": 2960
+      },
+      {
+        "query": "turn a zod schema into a json schema document",
+        "expect": "processSchema (packages/zod/src/v4/core/to-json-schema.ts)",
+        "rank": "—",
+        "packed": 332,
+        "baseline": 1931
+      },
+      {
+        "query": "compile a schema into a validating function",
+        "expect": "compile (packages/zod/src/v4/core/compile.ts)",
+        "rank": 1,
+        "packed": 407,
+        "baseline": 2977
+      },
+      {
+        "query": "add a custom validation refinement",
+        "expect": "refine (packages/zod/src/v3/types.ts)",
+        "rank": "—",
+        "packed": 496,
+        "baseline": 7868
+      }
+    ],
+    "n": 12,
+    "top1": 0.6666666666666666,
+    "top5": 0.75,
+    "mrr": 0.6944444444444445,
+    "packedAvg": 804,
+    "baselineAvg": 4249,
+    "saving": 0.8107874865156419
+  },
+  {
+    "repo": "httpx",
+    "rows": [
+      {
+        "query": "send an http request and return a response",
+        "expect": "request (httpx/_api.py)",
+        "rank": 2,
+        "packed": 1219,
+        "baseline": 42132
+      },
+      {
+        "query": "http basic authentication flow",
+        "expect": "BasicAuth (httpx/_auth.py)",
+        "rank": 1,
+        "packed": 869,
+        "baseline": 42132
+      },
+      {
+        "query": "digest authentication challenge response",
+        "expect": "DigestAuth (httpx/_auth.py)",
+        "rank": "—",
+        "packed": 1199,
+        "baseline": 42132
+      },
+      {
+        "query": "build the authorization header for digest auth",
+        "expect": "_build_auth_header (httpx/_auth.py)",
+        "rank": 1,
+        "packed": 1200,
+        "baseline": 42132
+      },
+      {
+        "query": "decode a deflate compressed response body",
+        "expect": "DeflateDecoder (httpx/_decoders.py)",
+        "rank": 2,
+        "packed": 1219,
+        "baseline": 44049
+      },
+      {
+        "query": "decode brotli compressed content",
+        "expect": "BrotliDecoder (httpx/_decoders.py)",
+        "rank": 1,
+        "packed": 1188,
+        "baseline": 44049
+      },
+      {
+        "query": "map httpcore exceptions into httpx exceptions",
+        "expect": "map_httpcore_exceptions (httpx/_transports/default.py)",
+        "rank": 1,
+        "packed": 997,
+        "baseline": 41853
+      },
+      {
+        "query": "parse the link header into relations",
+        "expect": "_parse_header_links (httpx/_models.py)",
+        "rank": 1,
+        "packed": 720,
+        "baseline": 42132
+      },
+      {
+        "query": "hide sensitive headers like authorization",
+        "expect": "_obfuscate_sensitive_headers (httpx/_models.py)",
+        "rank": 1,
+        "packed": 1071,
+        "baseline": 42132
+      },
+      {
+        "query": "timeout configuration values",
+        "expect": "Timeout (httpx/_config.py)",
+        "rank": 1,
+        "packed": 1219,
+        "baseline": 39264
+      },
+      {
+        "query": "connection pool limits configuration",
+        "expect": "Limits (httpx/_config.py)",
+        "rank": 1,
+        "packed": 802,
+        "baseline": 39264
+      },
+      {
+        "query": "join a url with a relative path",
+        "expect": "join (httpx/_urls.py)",
+        "rank": 2,
+        "packed": 1154,
+        "baseline": 42132
+      }
+    ],
+    "n": 12,
+    "top1": 0.6666666666666666,
+    "top5": 0.9166666666666666,
+    "mrr": 0.7916666666666666,
+    "packedAvg": 1071,
+    "baselineAvg": 41950,
+    "saving": 0.9744598264213761
+  }
+]

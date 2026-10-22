@@ -1,0 +1,12 @@
+{"query": "send an http request and return a response", "expect": ["httpx/_api.py", "request"]}
+{"query": "http basic authentication flow", "expect": ["httpx/_auth.py", "BasicAuth"]}
+{"query": "digest authentication challenge response", "expect": ["httpx/_auth.py", "DigestAuth"]}
+{"query": "build the authorization header for digest auth", "expect": ["httpx/_auth.py", "_build_auth_header"]}
+{"query": "decode a deflate compressed response body", "expect": ["httpx/_decoders.py", "DeflateDecoder"]}
+{"query": "decode brotli compressed content", "expect": ["httpx/_decoders.py", "BrotliDecoder"]}
+{"query": "map httpcore exceptions into httpx exceptions", "expect": ["httpx/_transports/default.py", "map_httpcore_exceptions"]}
+{"query": "parse the link header into relations", "expect": ["httpx/_models.py", "_parse_header_links"]}
+{"query": "hide sensitive headers like authorization", "expect": ["httpx/_models.py", "_obfuscate_sensitive_headers"]}
+{"query": "timeout configuration values", "expect": ["httpx/_config.py", "Timeout"]}
+{"query": "connection pool limits configuration", "expect": ["httpx/_config.py", "Limits"]}
+{"query": "join a url with a relative path", "expect": ["httpx/_urls.py", "join"]}

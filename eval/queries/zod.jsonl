@@ -1,0 +1,12 @@
+{"query": "convert a base schema definition into a zod schema", "expect": ["packages/zod/src/v4/classic/from-json-schema.ts", "convertBaseSchema"]}
+{"query": "walk a schema tree and visit every node", "expect": ["packages/zod/src/v4/core/visit.ts", "visit"]}
+{"query": "generate the check that validates an object's properties", "expect": ["packages/zod/src/v4/core/compile.ts", "generateObjectCheck"]}
+{"query": "build a jit compiled object parser", "expect": ["packages/zod/src/v4/core/schemas.ts", "$ZodObjectJIT"]}
+{"query": "extract definitions into a reusable defs map", "expect": ["packages/zod/src/v4/core/to-json-schema.ts", "extractDefs"]}
+{"query": "detect a recursive schema cycle", "expect": ["packages/zod/src/v4/core/memoizer.ts", "isRecursiveSchema"]}
+{"query": "flatten validation issues into field errors", "expect": ["packages/zod/src/v4/core/errors.ts", "flattenError"]}
+{"query": "generate a check for a string format", "expect": ["packages/zod/src/v4/core/compile.ts", "generateStringFormatCheck"]}
+{"query": "define a record schema with keys and values", "expect": ["packages/zod/src/v4/classic/schemas.ts", "record"]}
+{"query": "turn a zod schema into a json schema document", "expect": ["packages/zod/src/v4/core/to-json-schema.ts", "processSchema"]}
+{"query": "compile a schema into a validating function", "expect": ["packages/zod/src/v4/core/compile.ts", "compile"]}
+{"query": "add a custom validation refinement", "expect": ["packages/zod/src/v3/types.ts", "refine"]}

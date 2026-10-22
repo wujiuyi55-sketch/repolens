@@ -1,0 +1,12 @@
+{"query": "split camelCase identifiers", "expect": ["src/tokenize.js", "splitWords"]}
+{"query": "pack results into a token budget", "expect": ["src/pack.js", "packResults"]}
+{"query": "apply bm25 weights to the symbol column", "expect": ["src/search.js", "search"]}
+{"query": "walk the repo and collect source files", "expect": ["src/scan.js", "scanRepo"]}
+{"query": "how is the end of a declaration found", "expect": ["src/chunk.js", "findBlockEnd"]}
+{"query": "mask comments and strings before matching braces", "expect": ["src/chunk.js", "maskSource"]}
+{"query": "boost exact symbol matches", "expect": ["src/search.js", "rerank"]}
+{"query": "handle the tools/list request", "expect": ["src/mcp.js", "startMcpServer"]}
+{"query": "skip unchanged files by comparing mtime", "expect": ["src/indexer.js", "indexRepo"]}
+{"query": "create the fts5 virtual table", "expect": ["src/store.js", "SCHEMA"]}
+{"query": "python class methods", "expect": ["src/chunk.js", "chunkPython"]}
+{"query": "find references to an identifier", "expect": ["src/tools.js", "findReferences"]}

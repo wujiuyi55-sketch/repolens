@@ -1,0 +1,12 @@
+{"query": "how does app.set store a setting value", "expect": ["lib/application.js", "set"]}
+{"query": "compile the etag function from the setting", "expect": ["lib/utils.js", "compileETag"]}
+{"query": "normalize a response type such as json or html", "expect": ["lib/utils.js", "normalizeType"]}
+{"query": "send a file as the response body", "expect": ["lib/response.js", "sendFile"]}
+{"query": "redirect and set the location header", "expect": ["lib/response.js", "redirect"]}
+{"query": "content negotiation for accepted encodings", "expect": ["lib/request.js", "acceptsEncodings"]}
+{"query": "view rendering engine lookup", "expect": ["lib/view.js", "View"]}
+{"query": "compile the query parser setting", "expect": ["lib/utils.js", "compileQueryParser"]}
+{"query": "mount a middleware or sub app on the application", "expect": ["lib/application.js", "use"]}
+{"query": "should respond with jsonp", "expect": ["test/res.jsonp.js", "should respond with jsonp"]}
+{"query": "trust proxy setting compiled into a function", "expect": ["lib/utils.js", "compileTrust"]}
+{"query": "parse the range header of a request", "expect": ["lib/request.js", "range"]}
