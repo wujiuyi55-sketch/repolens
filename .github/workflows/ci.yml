@@ -1,0 +1,33 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Unit and protocol tests
+        run: node --test
+
+      - name: Index this repository
+        run: node src/cli.js index . --db .tmp/ci.db
+
+      - name: Query smoke test
+        run: node src/cli.js search "token budget" --db .tmp/ci.db | tee /tmp/search.txt
+
+      - name: Assert the smoke test returned a declaration
+        run: grep -q "packResults" /tmp/search.txt
+
+      - name: Benchmark gate (top-5 recall on this repo must stay above 90%)
+        run: node eval/run.js .tmp/ci.db eval/queries.jsonl --min-top5 0.9
+
+      - name: Chunk coverage report
+        run: node tools/coverage.js .tmp/ci.db --top 5
