@@ -1,0 +1,9 @@
+node_modules/
+.repolens/
+.tmp/
+*.db
+*.db-wal
+*.db-shm
+dist/
+coverage/
+.DS_Store
