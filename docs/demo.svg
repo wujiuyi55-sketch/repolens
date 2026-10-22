@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="492" viewBox="0 0 900 492" role="img" aria-label="repolens terminal demo">
+  <rect width="900" height="492" rx="10" fill="#0d1117" stroke="#30363d"/>
+  <rect width="900" height="40" rx="10" fill="#161b22"/>
+  <rect y="30" width="900" height="10" fill="#161b22"/>
+  <circle cx="24" cy="20" r="5.5" fill="#ff5f56"/>
+  <circle cx="44" cy="20" r="5.5" fill="#ffbd2e"/>
+  <circle cx="64" cy="20" r="5.5" fill="#27c93f"/>
+  <text x="92" y="25" fill="#8b949e" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12">repolens - declaration-level code search</text>
+  <text x="24" y="76" fill="#7ee787" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">  $ repolens search "how is the end of a declaration found"</text>
+  <text x="24" y="94" fill="#58a6ff" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">### src/chunk.js:535-568  findBlockEnd()  [function]</text>
+  <text x="24" y="112" fill="#c9d1d9" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">function findBlockEnd(masked, starts, startPos, indent) {</text>
+  <text x="24" y="130" fill="#c9d1d9" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">  const startLine = lineAt(starts, startPos);</text>
+  <text x="24" y="148" fill="#c9d1d9" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">  const lastLine = Math.min(startLine + LOOKAHEAD_LINES, starts.length - 1);</text>
+  <text x="24" y="166" fill="#c9d1d9" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">  let parens = 0;</text>
+  <text x="24" y="184" fill="#c9d1d9" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13"></text>
+  <text x="24" y="202" fill="#c9d1d9" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">  for (let li = startLine; li &lt;= lastLine; li++) {</text>
+  <text x="24" y="220" fill="#c9d1d9" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">    const lineStart = starts[li];</text>
+  <text x="24" y="238" fill="#c9d1d9" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">    const lineEnd = li + 1 &lt; starts.length ? starts[li + 1] - 1 : masked.length;</text>
+  <text x="24" y="256" fill="#c9d1d9" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">    let i = li === startLine ? startPos : lineStart;</text>
+  <text x="24" y="274" fill="#c9d1d9" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13"></text>
+  <text x="24" y="292" fill="#c9d1d9" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">    for (; i &lt; lineEnd; i++) {</text>
+  <text x="24" y="310" fill="#c9d1d9" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">      const ch = masked[i];</text>
+  <text x="24" y="328" fill="#c9d1d9" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">      if (ch === '(') parens++;</text>
+  <text x="24" y="346" fill="#c9d1d9" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">      else if (ch === ')') parens = Math.max(0, parens - 1);</text>
+  <text x="24" y="364" fill="#c9d1d9" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">      else if (ch === ';' &amp;&amp; parens === 0) return i;</text>
+  <text x="24" y="382" fill="#c9d1d9" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">      else if (ch === '{' &amp;&amp; parens === 0) {</text>
+  <text x="24" y="400" fill="#c9d1d9" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">        const close = matchPair(masked, i, '{', '}');</text>
+  <text x="24" y="418" fill="#c9d1d9" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">        if (close === -1) {</text>
+  <text x="24" y="436" fill="#c9d1d9" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">          // Unbalanced (JSX, templating). Fail small: keep the line, not the file.</text>
+  <text x="24" y="454" fill="#c9d1d9" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">          return lineEnd;</text>
+</svg>
